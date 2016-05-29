@@ -27,7 +27,7 @@
 execute "install epel-release rpm" do
   user "root"
   command <<-EOL
-    wget http://dl.fedoraproject.org/pub/epel/6Server/i386/epel-release-6-8.noarch.rpm
+    wget http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
     rpm -Uvh epel-release-6*.rpm
   EOL
   not_if "rpm -qa | grep epel-release"
